@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: pywapi
+Version: 0.2.1
+Summary: A python wrapper around the Yahoo! Weather, Google Weather, NOAA and GisMeteo APIs
+Home-page: http://code.google.com/p/python-weather-api/
+Author: Eugene Kaznacheev
+Author-email: qetzal@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: weather api yahoo noaa google
+Platform: UNKNOWN

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul>
+{% for item in weather%}
+<li>{{item}}</li>
+{% endfor %}
+</ul>
+{{weather}}
+{% endblock %}
