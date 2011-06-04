@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
 {% block body %}
-<p>Welcome to Zipweather!</p>
+<div class="index">
+<img align="center" src="../static/images/logo.png"/>
+<form method="post">
+  <input id="zipcode" name="zipcode" size="12" maxlength="5" placeholder="Eg. 14623" >
+  <input style="margin-bottom: -9px;" type="image" src="../static/images/go.png" name="image" width="79" height="50">
+</form>
+</div>
 {% endblock %}

@@ -1,5 +1,16 @@
 {% extends "layout.html" %}
 {% block body %}
-   <p>Current weather for {{city}} ({{zipcode}})</p>
-   {{cur_temp}}
+{% if valid %}
+   <p>Current weather for 
+{{weather['forecast_information']['city']}} ({{zipcode}})</p>
+   {{weather['current_conditions']['temp_f']}}°F | 
+   {{weather['current_conditions']['temp_c']}}°C<br />
+   {{weather['current_conditions']['condition']}}<br />
+   {{weather['current_conditions']['wind_condition']}}<br />
+   {{weather['current_conditions']['humidity']}}
+   <p>Forecast</p>
+   {{weather['forecast_information']['city']}}
+{% else %}
+   <p>Invalid zipcode {{zipcode}}</p>
+{% endif %}
 {% endblock %}
