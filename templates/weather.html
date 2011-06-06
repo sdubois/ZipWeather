@@ -1,16 +1,24 @@
 {% extends "layout.html" %}
 {% block body %}
 {% if valid %}
-   <p>Current weather for 
-{{weather['forecast_information']['city']}} ({{zipcode}})</p>
-   {{weather['current_conditions']['temp_f']}}°F | 
-   {{weather['current_conditions']['temp_c']}}°C<br />
-   {{weather['current_conditions']['condition']}}<br />
-   {{weather['current_conditions']['wind_condition']}}<br />
-   {{weather['current_conditions']['humidity']}}
-   <p>Forecast</p>
-   {{weather['forecast_information']['city']}}
+<div id="weather">
+<div id="current">
+     <p><h2>
+     {{weather['forecast_information']['city']}}
+     <span class="zipcode">({{zipcode}})</span>
+     </h2></p>
+     <div class="conditions">
+     <span class="item">{{weather['current_conditions']['condition']}}</span>
+     <span class="item">{{weather['current_conditions']['humidity']}}</span>
+     {{weather['current_conditions']['wind_condition']}}
+     </div>
+     <div class="temp">{{weather['current_conditions']['temp_f']}}°F | 
+     {{weather['current_conditions']['temp_c']}}°C</div><br />
+     </div>
+</div>
 {% else %}
+   <div class="invalid">
    <p>Invalid zipcode {{zipcode}}</p>
+   </div>
 {% endif %}
 {% endblock %}

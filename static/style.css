@@ -51,6 +51,18 @@ body{
 font-family: Helvetica, Arial, sans-serif;
 background-image: url('images/bg.png');
 background-repeat: repeat-x;
+color: #2e3436;
+}
+
+form {
+padding-top: 20px;
+}
+
+input::-webkit-input-placeholder {
+    color:    #ccc;
+}
+input:-moz-placeholder {
+    color:    #ccc;
 }
 
 .index{
@@ -69,13 +81,43 @@ text-align: center;
 font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 }
 
-form {
-padding-top: 20px;
+#weather{
+width: 100%;
+margin: auto;
+text-align: center;
+margin-top: 5em;
 }
 
-input::-webkit-input-placeholder {
-    color:    #ccc;
+#current h2{font-size: 2em; 
+font-weight: bold;
+padding-bottom: .75em;
 }
-input:-moz-placeholder {
-    color:    #ccc;
+
+#current img{
+padding-bottom: .75em;
+}
+.zipcode{
+color: #555753;
+font-size: .75em;
+font-weight: normal;
+}
+.temp{
+margin-top: .5em;;
+font-size: 2em;
+}
+.conditions{
+font-size: .75em;
+}
+.item{
+padding-right: 1em;
+}
+#forecast{
+margin-top: 1em;
+}
+
+.invalid{
+text-align: center;
+width: 100%;
+margin: auto;
+margin-top: 5em;
 }

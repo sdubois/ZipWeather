@@ -8,7 +8,12 @@ app = Flask(__name__)
 def index():
     if request.method == 'POST':
         zipcode = request.form['zipcode']
-        return redirect(url_for('weather', zipcode=zipcode))
+        print "zipcode"+zipcode
+        if zipcode == "":
+            return render_template('weather.html', zipcode=zipcode, \
+            valid=False)
+        else:
+            return redirect(url_for('weather', zipcode=zipcode))
     return render_template('index.html')
 
 @app.route('/<zipcode>/')
