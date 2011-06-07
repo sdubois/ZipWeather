@@ -18,7 +18,11 @@ def index():
 
 @app.route('/<zipcode>/')
 def weather(zipcode):
-    valid = True
+    result = zipcode.isdigit()
+    if result:
+        valid = True
+    else:
+        valid = False
     try:
         result = pywapi.get_weather_from_google(zipcode)    
         return render_template('weather.html', \
