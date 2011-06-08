@@ -4,8 +4,9 @@
 <div id="weather">
 <div id="current">
      <p><h2>
-     {{weather['forecast_information']['city']}}
-     <span class="zipcode">({{zipcode}})</span>
+     {{weather['forecast_information']['city']}} <span class="zipcode">({{zipcode}})</span><br/>
+     <img width="200px" src="{{image}}"/><br/>
+     
      </h2></p>
      <div class="conditions">
      <span class="item">{{weather['current_conditions']['condition']}}</span>
