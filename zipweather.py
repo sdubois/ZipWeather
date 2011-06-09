@@ -54,7 +54,7 @@ def weather(zipcode):
         if condition == 'Freezing Drizzle':
             image = 'FreezingDrizzle.png'
         if condition == 'Partly Sunny' or condition == 'Mostly Cloudy':
-            image = 'MostlyCloud.png'
+            image = 'MostlyCloudy.png'
         if condition == 'Mostly Sunny' or condition == 'Partly Cloudy':
             image = 'MostlySunny.png'
         if condition == 'Cloudy' or condition == 'Overcast':
