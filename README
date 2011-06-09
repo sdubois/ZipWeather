@@ -2,3 +2,6 @@ ZipWeather
 
 ZipWeather is a web app written in Python using the Flask framework
 for displaying the weather in a clean and simple format. 
+
+There is a test server running at http://limbo.csh.rit.edu:8001. Feel
+free to test it out and let me know if something breaks.
