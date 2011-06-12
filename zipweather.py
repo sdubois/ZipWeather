@@ -26,50 +26,41 @@ def weather(zipcode):
     try:
         result = pywapi.get_weather_from_google(zipcode)
         condition = result['current_conditions']['condition']
-        if condition == 'Sunny' or condition == 'Clear':
-            image = 'Sunny.png'
-        if condition == 'Thunderstorm' or \
-           condition == 'Chance of TStorm' or \
-           condition == 'Scattered Thunderstorms' or\
-           condition == 'Chance of Storm' or\
-           condition == 'Rain':
-            image = 'Thunderstorm.png'
-        if condition == 'Storm' or \
-           condition == 'Showers' or \
-           condition == 'Scattered Showers' or \
-           condition == 'Chance of Rain':
-            image = 'Rain.png'
-        if condition == 'Light Rain':
-            image = 'RainLight.png'
-        if condition == 'Rain and Snow':
-            image = 'RainSnow.png'
-        if condition == 'Snow Showers' or \
-           condition == 'Chance of Snow' or \
-           condition == 'Snow':
-            image = 'Snow.png'
-        if condition == 'Light Snow' or condition == 'Flurries':
-            image = 'SnowLight.png'
-        if condition == 'Hail':
-            image = 'Hail.png'
-        if condition == 'Freezing Drizzle':
-            image = 'FreezingDrizzle.png'
-        if condition == 'Partly Sunny' or condition == 'Mostly Cloudy':
-            image = 'MostlyCloudy.png'
-        if condition == 'Mostly Sunny' or condition == 'Partly Cloudy':
-            image = 'MostlySunny.png'
-        if condition == 'Cloudy' or condition == 'Overcast':
-            image = 'Cloudy.png'
-        if condition == 'Sleet' or condition == 'Icy':
-            image = 'Sleet.png'
-        if condition == 'Mist':
-            image = 'Mist.png'
-        if condition == 'Fog':
-            image = 'Fog.png'
-        if condition == 'Smoke':
-            image = 'Smoke.png'
-        if condition == 'Dust' or condition == 'Haze':
-            image = 'Dust.png'
-        image = "../static/images/weather/"+image
+        options = {
+            'Sunny': 'Sunny.png',
+            'Clear': 'Sunny.png',
+            'Thunderstorm': 'Thunderstorm.png',
+            'Chance of TStorm' : 'Thunderstorm.png',
+            'Scattered Thunderstorms': 'Thunderstorm.png',
+            'Chance of Storm': 'Thunderstorm.png',
+            'Rain': 'Thunderstorm.png',
+            'Storm': 'Rain.png', 
+            'Showers': 'Rain.png', 
+            'Scattered Showers': 'Rain.png', 
+            'Chance of Rain': 'Rain.png', 
+            'Light Rain': 'RainLight.png',
+            'Rain and Snow': 'RainSnow.png',
+            'Snow Showers': 'Snow.png',
+            'Chance of Snow': 'Snow.png',
+            'Snow': 'Snow.png',
+            'Light Snow': 'SnowLight.png',
+            'Flurries': 'SnowLight.png',
+            'Hail': 'Hail.png',
+            'FreezingDrizzle': 'FreezingDrizzle.png',
+            'Partly Cloudy': 'MostlyCloudy.png',
+            'Mostly Sunny': 'MostlyCloudy.png',
+            'Mostly Sunny': 'MostlySunny.png',
+            'Partly Cloudy': 'MostlySunny.png',
+            'Cloudy': 'Cloudy.png',
+            'Overcast': 'Cloudy.png',
+            'Sleet': 'Sleet.png',
+            'Icy': 'Sleet.png',
+            'Mist': 'Mist.png',
+            'Fog': 'Fog.png',
+            'Smoke': 'Smoke.png',
+            'Dust': 'Dust.png',
+            'Haze': 'Dust.png',}
+        image = "../static/images/weather/"+options[condition]
         return render_template('weather.html', \
         zipcode=zipcode, valid=valid, weather=result,  image=image)
     except IndexError:
