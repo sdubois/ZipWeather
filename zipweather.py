@@ -48,7 +48,7 @@ def weather(zipcode):
             'Hail': 'Hail.png',
             'FreezingDrizzle': 'FreezingDrizzle.png',
             'Partly Cloudy': 'MostlyCloudy.png',
-            'Mostly Sunny': 'MostlyCloudy.png',
+            'Mostly Cloudy': 'MostlyCloudy.png',
             'Mostly Sunny': 'MostlySunny.png',
             'Partly Cloudy': 'MostlySunny.png',
             'Cloudy': 'Cloudy.png',
